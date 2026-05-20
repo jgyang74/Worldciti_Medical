@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sydney CBD GP Clinic | Same-Day Appointments</title>
-  <meta name="description" content="Trusted GP clinic in Sydney CBD with same-day appointments, experienced doctors, preventive care, telehealth, vaccinations, and patient-friendly booking." />
+  <title>Worldciti Medical | GP Clinic in Haymarket</title>
+  <meta name="description" content="Worldciti Medical is a GP clinic in Haymarket offering family medicine, women's health, men's health, travel medicine, antenatal care, preventive care, chronic disease management and more." />
   <meta name="theme-color" content="#0f4c81" />
-  <meta property="og:title" content="Sydney CBD GP Clinic | Same-Day Appointments" />
-  <meta property="og:description" content="Book a GP appointment in Sydney CBD. General consultations, mental health, women's health, skin checks, vaccinations, and telehealth." />
+  <meta property="og:title" content="Worldciti Medical | GP Clinic in Haymarket" />
+  <meta property="og:description" content="Call Worldciti Medical for GP appointments in Haymarket. Care available for English, Korean, Japanese and Chinese speaking patients." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_AU" />
   <style>
@@ -152,13 +152,12 @@
     }
 
     .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--primary), #1c6db5);
-      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--border);
       box-shadow: 0 10px 22px rgba(15, 76, 129, 0.18);
     }
 
@@ -254,27 +253,27 @@
       margin-bottom: 1.2rem;
     }
 
-    .slots {
+    .contact-panel-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.8rem;
       margin-bottom: 1rem;
     }
 
-    .slot {
+    .contact-panel-item {
       padding: 0.95rem;
       border-radius: 16px;
       border: 1px solid var(--border);
       background: #fff;
     }
 
-    .slot strong {
+    .contact-panel-item strong {
       display: block;
       color: var(--primary);
       margin-bottom: 0.2rem;
     }
 
-    .slot span {
+    .contact-panel-item span,
+    .contact-panel-item a {
       color: var(--muted);
       font-size: 0.95rem;
     }
@@ -422,7 +421,7 @@
     }
 
     .doctor-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .doctor-card {
@@ -478,16 +477,18 @@
     .map-box {
       min-height: 380px;
       border-radius: 28px;
-      background: linear-gradient(135deg, #d8e7f4, #f5f9fc);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      display: grid;
-      place-items: center;
-      color: var(--primary);
-      font-size: 1.1rem;
-      font-weight: 700;
-      text-align: center;
-      padding: 1.2rem;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border: 0;
+      display: block;
     }
 
     .location-card {
@@ -649,9 +650,6 @@
         justify-content: flex-start;
       }
 
-      .slots {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -671,14 +669,15 @@
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "Sydney CBD GP Clinic",
-    "url": "https://www.example.com/",
-    "telephone": "+61-2-9000-0000",
+    "name": "Worldciti Medical",
+    "telephone": "+61-2-9281-7311",
+    "faxNumber": "+61-2-9281-7377",
+    "email": "worldcitimedical@gmail.com",
     "medicalSpecialty": ["GeneralPractice"],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Level 5, 100 George Street",
-      "addressLocality": "Sydney",
+      "streetAddress": "Level 1, 722 George St",
+      "addressLocality": "Haymarket",
       "addressRegion": "NSW",
       "postalCode": "2000",
       "addressCountry": "AU"
@@ -687,14 +686,14 @@
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
+        "opens": "09:00",
+        "closes": "17:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Saturday"],
         "opens": "09:00",
-        "closes": "13:00"
+        "closes": "16:00"
       }
     ]
   }
@@ -704,8 +703,8 @@
   <header>
     <div class="container nav">
       <a href="#top" class="brand" aria-label="Go to homepage">
-        <span class="brand-badge">GP</span>
-        <span>Sydney CBD GP Clinic</span>
+        <img class="brand-badge" src="worldcitimedical_logo.png" alt="" />
+        <span>Worldciti Medical</span>
       </a>
 
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
@@ -715,7 +714,7 @@
         <a href="#doctors">Doctors</a>
         <a href="#patients">Patient Info</a>
         <a href="#location">Location</a>
-        <a href="#booking" class="btn btn-primary">Book Now</a>
+        <a href="tel:0292817311" class="btn btn-primary">Book appointment(Call Clinic)</a>
       </nav>
     </div>
   </header>
@@ -724,55 +723,51 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal visible">
-          <div class="chip">Sydney CBD • Same-day appointments • New patients welcome</div>
+          <div class="chip">Haymarket GP clinic • English, Korean, Japanese & Chinese</div>
           <div class="eyebrow">Trusted, convenient and patient-friendly care</div>
-          <h1>Your trusted GP in Sydney CBD</h1>
+          <h1>Worldciti Medical</h1>
           <p>
-            Personalised general practice care for busy city professionals, families and new patients.
-            Book general consultations, mental health appointments, vaccinations, skin checks and telehealth.
+            Personalised general practice care in Haymarket for families, city professionals,
+            students and visitors. Call our clinic to book an appointment with our GP team.
           </p>
           <div class="hero-actions">
-            <a href="#booking" class="btn btn-primary">Book Appointment</a>
-            <a href="tel:0290000000" class="btn btn-secondary">Call Clinic</a>
+            <a href="tel:0292817311" class="btn btn-primary">Book appointment(Call Clinic)</a>
+            <a href="#location" class="btn btn-secondary">Clinic Details</a>
           </div>
           <div class="trust-row">
-            <span class="trust-pill">Experienced GPs</span>
-            <span class="trust-pill">Multilingual Support</span>
-            <span class="trust-pill">Close to Wynyard & Martin Place</span>
+            <span class="trust-pill">Experienced female GPs</span>
+            <span class="trust-pill">Multilingual support</span>
+            <span class="trust-pill">Level 1, 722 George St</span>
           </div>
         </div>
 
         <div class="hero-card booking-panel reveal" id="booking">
-          <h3>See available appointments today</h3>
-          <p>Choose a time that suits you and book online in just a few clicks.</p>
-          <div class="slots">
-            <div class="slot">
-              <strong>General Consultation</strong>
-              <span>Today • 10:30 AM</span>
+          <h3>Book by calling the clinic</h3>
+          <p>Appointments are managed directly by our reception team. Please call us during clinic hours.</p>
+          <div class="contact-panel-list">
+            <div class="contact-panel-item">
+              <strong>Phone</strong>
+              <a href="tel:0292817311">02 9281 7311</a>
             </div>
-            <div class="slot">
-              <strong>Mental Health Care Plan</strong>
-              <span>Today • 1:15 PM</span>
+            <div class="contact-panel-item">
+              <strong>Clinic hours</strong>
+              <span>Mon - Fri 9 am to 5 pm<br />Sat 9 am to 4 pm</span>
             </div>
-            <div class="slot">
-              <strong>Skin Check</strong>
-              <span>Today • 3:00 PM</span>
-            </div>
-            <div class="slot">
-              <strong>Telehealth Review</strong>
-              <span>Tomorrow • 9:20 AM</span>
+            <div class="contact-panel-item">
+              <strong>Languages</strong>
+              <span>English, Korean, Japanese and Chinese speaking patients welcome</span>
             </div>
           </div>
-          <a href="#contact" class="btn btn-primary" style="width: 100%;">Book with Our Doctors</a>
-          <div class="notice" style="margin-top: 1rem;">Need urgent advice? Call the clinic directly for same-day availability.</div>
+          <a href="tel:0292817311" class="btn btn-primary" style="width: 100%;">Book appointment(Call Clinic)</a>
+          <div class="notice" style="margin-top: 1rem;">For medical emergencies, call 000 immediately.</div>
         </div>
       </div>
 
       <div class="container stats reveal">
-        <div class="stat"><strong>Same-Day</strong><span>appointments available</span></div>
+        <div class="stat"><strong>Call</strong><span>to book appointments</span></div>
         <div class="stat"><strong>6 Days</strong><span>of patient care each week</span></div>
-        <div class="stat"><strong>CBD</strong><span>location near major transport</span></div>
-        <div class="stat"><strong>Telehealth</strong><span>for eligible follow-up care</span></div>
+        <div class="stat"><strong>Haymarket</strong><span>George Street location</span></div>
+        <div class="stat"><strong>4 Languages</strong><span>English, Korean, Japanese, Chinese</span></div>
       </div>
     </section>
 
@@ -782,7 +777,7 @@
           <div>
             <div class="eyebrow">Primary services</div>
             <h2>Care designed around real patient needs</h2>
-            <p>Our services are structured around the most common reasons patients search for a GP in Sydney CBD.</p>
+            <p>Worldciti Medical provides practical GP care across everyday health needs, preventive care and ongoing management.</p>
           </div>
         </div>
 
@@ -790,55 +785,82 @@
           <article class="card service-card reveal">
             <div>
               <div class="service-icon">🩺</div>
-              <h3>General Consultation</h3>
-              <p>Assessment, diagnosis and treatment for everyday health concerns, check-ups and ongoing GP care.</p>
+              <h3>Family Medicine</h3>
+              <p>General health care for individuals and families, including acute concerns, check-ups and ongoing GP support.</p>
             </div>
-            <a href="#contact" class="service-link">Book a consultation</a>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
           </article>
 
           <article class="card service-card reveal">
             <div>
-              <div class="service-icon">🧠</div>
-              <h3>Mental Health</h3>
-              <p>Supportive GP consultations for stress, anxiety, depression and mental health care planning.</p>
-            </div>
-            <a href="#contact" class="service-link">See mental health options</a>
-          </article>
-
-          <article class="card service-card reveal">
-            <div>
-              <div class="service-icon">💉</div>
-              <h3>Vaccinations</h3>
-              <p>Flu vaccines, travel advice, routine immunisation guidance and preventive care appointments.</p>
-            </div>
-            <a href="#contact" class="service-link">Check vaccination services</a>
-          </article>
-
-          <article class="card service-card reveal">
-            <div>
-              <div class="service-icon">🧴</div>
-              <h3>Skin Checks</h3>
-              <p>Early review of suspicious lesions, sun-related skin changes and preventive skin screening.</p>
-            </div>
-            <a href="#contact" class="service-link">Book a skin check</a>
-          </article>
-
-          <article class="card service-card reveal">
-            <div>
-              <div class="service-icon">👩</div>
+              <div class="service-icon">♀</div>
               <h3>Women's Health</h3>
-              <p>Routine preventive care, general women’s health support and ongoing management discussions.</p>
+              <p>Preventive care and GP support for women’s health concerns, reproductive health and wellbeing.</p>
             </div>
-            <a href="#contact" class="service-link">Explore women’s health</a>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
           </article>
 
           <article class="card service-card reveal">
             <div>
-              <div class="service-icon">💻</div>
-              <h3>Telehealth</h3>
-              <p>Convenient follow-up care for eligible patients who need flexible access from home or work.</p>
+              <div class="service-icon">♂</div>
+              <h3>Men's Health</h3>
+              <p>Confidential GP care for men’s health, screening, prevention and general wellbeing.</p>
             </div>
-            <a href="#contact" class="service-link">Check telehealth availability</a>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
+          </article>
+
+          <article class="card service-card reveal">
+            <div>
+              <div class="service-icon">✈</div>
+              <h3>Travel Medicine</h3>
+              <p>Travel health consultations, destination advice and preventive care before your trip.</p>
+            </div>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
+          </article>
+
+          <article class="card service-card reveal">
+            <div>
+              <div class="service-icon">♡</div>
+              <h3>Antenatal Care</h3>
+              <p>Supportive GP care during pregnancy, including antenatal checks and shared care discussions.</p>
+            </div>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
+          </article>
+
+          <article class="card service-card reveal">
+            <div>
+              <div class="service-icon">✓</div>
+              <h3>Preventive Medicine</h3>
+              <p>Health checks, screening, lifestyle support and early intervention to help prevent future illness.</p>
+            </div>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
+          </article>
+
+          <article class="card service-card reveal">
+            <div>
+              <div class="service-icon">🛡</div>
+              <h3>Infectious Diseases</h3>
+              <p>Assessment and management of common infectious conditions, with practical advice for recovery and prevention.</p>
+            </div>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
+          </article>
+
+          <article class="card service-card reveal">
+            <div>
+              <div class="service-icon">↻</div>
+              <h3>Chronic Disease Management</h3>
+              <p>Ongoing support and care planning for long-term conditions with regular reviews and coordinated care.</p>
+            </div>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
+          </article>
+
+          <article class="card service-card reveal">
+            <div>
+              <div class="service-icon">✦</div>
+              <h3>Cosmetic Injections</h3>
+              <p>Consultations for cosmetic injection treatments provided with a medical, patient-focused approach.</p>
+            </div>
+            <a href="tel:0292817311" class="service-link">Call to book</a>
           </article>
         </div>
       </div>
@@ -850,26 +872,26 @@
           <div>
             <div class="eyebrow">Why patients choose us</div>
             <h2>Clear, credible and convenient care</h2>
-            <p>Designed to reduce friction from first search to completed booking.</p>
+            <p>Care that is easy to access, easy to understand and welcoming for multilingual patients.</p>
           </div>
         </div>
 
         <div class="why-grid">
           <div class="why-item reveal">
-            <strong>Convenient Sydney CBD location</strong>
-            <p>Easy access for professionals, students and nearby residents using public transport.</p>
+            <strong>Convenient Haymarket location</strong>
+            <p>Located on George Street for city workers, students, residents and visitors.</p>
           </div>
           <div class="why-item reveal">
-            <strong>Fast online booking</strong>
-            <p>Prominent booking calls-to-action and patient-friendly appointment flow.</p>
+            <strong>Direct clinic booking</strong>
+            <p>Call reception to arrange an appointment and confirm availability.</p>
           </div>
           <div class="why-item reveal">
-            <strong>Experienced, approachable GPs</strong>
-            <p>Profiles highlight clinical interests, languages and practical patient benefits.</p>
+            <strong>Female GP team</strong>
+            <p>Meet Dr Jessica Lee and Dr Nam Eun Kim for patient-focused general practice care.</p>
           </div>
           <div class="why-item reveal">
-            <strong>Preventive and ongoing care</strong>
-            <p>Support for acute issues, follow-up care, preventive health and chronic care discussions.</p>
+            <strong>Multilingual patient support</strong>
+            <p>Catering for English, Korean, Japanese and Chinese speaking patients.</p>
           </div>
         </div>
       </div>
@@ -881,7 +903,7 @@
           <div>
             <div class="eyebrow">Practitioner profiles</div>
             <h2>Meet our doctors</h2>
-            <p>Each profile is designed to build trust quickly through special interests, language support and a direct booking path.</p>
+            <p>Worldciti Medical is home to two female GPs providing approachable and comprehensive care.</p>
           </div>
         </div>
 
@@ -889,45 +911,30 @@
           <article class="card doctor-card reveal">
             <div class="doctor-photo">DR</div>
             <div class="doctor-body">
-              <h3>Dr Emily Chen</h3>
-              <p>General Practice • FRACGP</p>
+              <h3>Dr Jessica Lee</h3>
+              <p>Female GP</p>
               <div class="doctor-meta">
+                <span>Family Medicine</span>
                 <span>Women's Health</span>
                 <span>Preventive Care</span>
-                <span>English / Mandarin</span>
               </div>
-              <p>Focused on preventive care, routine GP consultations and personalised support for long-term wellbeing.</p>
-              <a class="service-link" href="#contact">Book Dr Emily Chen</a>
+              <p>Provides patient-centred general practice care across everyday health concerns, prevention and ongoing wellbeing.</p>
+              <a class="service-link" href="tel:0292817311">Book appointment(Call Clinic)</a>
             </div>
           </article>
 
           <article class="card doctor-card reveal">
             <div class="doctor-photo">DR</div>
             <div class="doctor-body">
-              <h3>Dr Daniel Kim</h3>
-              <p>General Practice • FRACGP</p>
+              <h3>Dr Nam Eun Kim</h3>
+              <p>Female GP</p>
               <div class="doctor-meta">
-                <span>Mental Health</span>
+                <span>Family Medicine</span>
                 <span>Chronic Care</span>
-                <span>English / Korean</span>
+                <span>Women's Health</span>
               </div>
-              <p>Supports patients with ongoing care needs, practical mental health discussions and clear follow-up planning.</p>
-              <a class="service-link" href="#contact">Book Dr Daniel Kim</a>
-            </div>
-          </article>
-
-          <article class="card doctor-card reveal">
-            <div class="doctor-photo">DR</div>
-            <div class="doctor-body">
-              <h3>Dr Sarah Patel</h3>
-              <p>General Practice • FRACGP</p>
-              <div class="doctor-meta">
-                <span>Skin Checks</span>
-                <span>Travel Health</span>
-                <span>English / Hindi</span>
-              </div>
-              <p>Offers skin check appointments, vaccination advice and travel-focused preventive care for busy patients.</p>
-              <a class="service-link" href="#contact">Book Dr Sarah Patel</a>
+              <p>Supports patients with general health, preventive care and chronic disease management with clear follow-up planning.</p>
+              <a class="service-link" href="tel:0292817311">Book appointment(Call Clinic)</a>
             </div>
           </article>
         </div>
@@ -940,30 +947,30 @@
           <div>
             <div class="eyebrow">Patient information</div>
             <h2>Essential information patients look for first</h2>
-            <p>These quick-access blocks reduce uncertainty and improve conversion before a patient leaves the page.</p>
+            <p>Quick details to help you contact the clinic, visit us and prepare for your appointment.</p>
           </div>
         </div>
 
         <div class="info-grid">
           <article class="card info-card reveal">
-            <h3>Fees & Billing</h3>
-            <p>Explain consultation fees clearly, along with any Medicare or private billing information.</p>
-            <a href="#contact" class="text-link">View billing details</a>
+            <h3>Appointments</h3>
+            <p>Please call the clinic directly to book an appointment with our reception team.</p>
+            <a href="tel:0292817311" class="text-link">Call 02 9281 7311</a>
           </article>
           <article class="card info-card reveal">
-            <h3>New Patients</h3>
-            <p>Outline registration steps, what to bring and how to prepare for a first appointment.</p>
-            <a href="#contact" class="text-link">See new patient guide</a>
+            <h3>Languages</h3>
+            <p>Catering for English, Korean, Japanese and Chinese speaking patients.</p>
+            <a href="#location" class="text-link">View clinic details</a>
           </article>
           <article class="card info-card reveal">
-            <h3>Telehealth</h3>
-            <p>Clarify who is eligible, how appointments work and what patients should expect.</p>
-            <a href="#contact" class="text-link">Learn about telehealth</a>
+            <h3>Opening Hours</h3>
+            <p>Mon - Fri 9 am to 5 pm. Sat 9 am to 4 pm.</p>
+            <a href="#location" class="text-link">See hours</a>
           </article>
           <article class="card info-card reveal">
-            <h3>Scripts & Referrals</h3>
-            <p>Share the safest path for repeat prescriptions, referrals and follow-up communication.</p>
-            <a href="#contact" class="text-link">Patient request options</a>
+            <h3>Contact</h3>
+            <p>Email worldcitimedical@gmail.com or fax documents to 02 9281 7377.</p>
+            <a href="mailto:worldcitimedical@gmail.com" class="text-link">Email the clinic</a>
           </article>
         </div>
       </div>
@@ -974,26 +981,26 @@
         <div class="section-head reveal">
           <div>
             <div class="eyebrow">Patient resources</div>
-            <h2>Content that supports SEO and patient education</h2>
-            <p>These resource cards model the article structure you can expand into a real content hub later.</p>
+            <h2>Common reasons to visit your GP</h2>
+            <p>Worldciti Medical supports a broad range of health needs, from routine care through to long-term management.</p>
           </div>
         </div>
 
         <div class="resource-grid">
           <article class="card resource-card reveal">
-            <h3>When should you see a GP for flu symptoms?</h3>
-            <p>Practical advice patients commonly search for during flu season and peak respiratory periods.</p>
-            <a href="#contact" class="text-link">Read article</a>
+            <h3>Preventive health checks</h3>
+            <p>Discuss screening, lifestyle risk factors and early intervention with your GP.</p>
+            <a href="tel:0292817311" class="text-link">Call to book</a>
           </article>
           <article class="card resource-card reveal">
-            <h3>How to prepare for your first GP appointment</h3>
-            <p>A beginner-friendly guide that improves patient confidence and reduces booking hesitation.</p>
-            <a href="#contact" class="text-link">Read article</a>
+            <h3>Travel and infectious disease care</h3>
+            <p>Arrange travel medicine advice or support for infectious disease concerns before or after travel.</p>
+            <a href="tel:0292817311" class="text-link">Call to book</a>
           </article>
           <article class="card resource-card reveal">
-            <h3>What to expect from a skin check in Sydney</h3>
-            <p>Service-led content aligned to one of the most useful local-intent healthcare search topics.</p>
-            <a href="#contact" class="text-link">Read article</a>
+            <h3>Chronic disease support</h3>
+            <p>Book regular reviews for ongoing conditions and coordinated GP management plans.</p>
+            <a href="tel:0292817311" class="text-link">Call to book</a>
           </article>
         </div>
       </div>
@@ -1002,20 +1009,25 @@
     <section id="location" class="section">
       <div class="container location-grid">
         <div class="map-box reveal">
-          Interactive map placeholder<br />
-          Sydney CBD clinic location<br />
-          Near Wynyard / Martin Place
+          <iframe
+            title="Google Map showing Worldciti Medical at Level 1, 722 George St Haymarket NSW 2000"
+            src="https://www.google.com/maps?q=Worldciti%20Medical%20Level%201%20722%20George%20St%20Haymarket%20NSW%202000&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="location-card">
           <div class="card location-copy reveal">
             <div class="eyebrow">Contact & location</div>
-            <h2 style="font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.1; margin-bottom: 0.75rem;">Easy to reach, easy to book</h2>
-            <p>Position your clinic around convenience: transport access, opening hours, phone number and same-day availability.</p>
+            <h2 style="font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.1; margin-bottom: 0.75rem;">Easy to reach, easy to call</h2>
+            <p>Contact Worldciti Medical directly for appointment availability, clinic information and patient enquiries.</p>
           </div>
           <div class="location-list">
-            <div class="location-item reveal"><strong>Address</strong><br />Level 5, 100 George Street, Sydney NSW 2000</div>
-            <div class="location-item reveal"><strong>Hours</strong><br />Mon–Fri 8:00 AM – 6:00 PM • Sat 9:00 AM – 1:00 PM</div>
-            <div class="location-item reveal"><strong>Contact</strong><br /><a href="tel:0290000000">(02) 9000 0000</a> • hello@exampleclinic.com.au</div>
+            <div class="location-item reveal"><strong>Address</strong><br />Level 1, 722 George St Haymarket NSW 2000</div>
+            <div class="location-item reveal"><strong>Hours</strong><br />Mon - Fri 9 am to 5 pm • Sat 9 am to 4 pm</div>
+            <div class="location-item reveal"><strong>Contact</strong><br /><a href="tel:0292817311">02 9281 7311</a> • <a href="mailto:worldcitimedical@gmail.com">worldcitimedical@gmail.com</a></div>
+            <div class="location-item reveal"><strong>Fax</strong><br />02 9281 7377</div>
             <div class="location-item reveal"><strong>Emergency</strong><br />If this is a medical emergency, call 000 immediately.</div>
           </div>
         </div>
@@ -1026,13 +1038,13 @@
       <div class="container">
         <div class="cta-band reveal">
           <div>
-            <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Ready to launch?</div>
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; margin-bottom: 0.75rem;">Book your GP appointment in Sydney CBD</h2>
-            <p>Replace this demo call-to-action with your real booking platform, phone number, privacy links and clinic-specific policy details.</p>
+            <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Book an appointment</div>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; margin-bottom: 0.75rem;">Call Worldciti Medical</h2>
+            <p>Speak with our reception team to arrange an appointment. We welcome English, Korean, Japanese and Chinese speaking patients.</p>
           </div>
           <div class="cta-actions">
-            <a href="#booking" class="btn btn-primary" style="background:#fff; color: var(--primary);">See Available Times</a>
-            <a href="tel:0290000000" class="btn btn-secondary">Call the Clinic</a>
+            <a href="tel:0292817311" class="btn btn-primary" style="background:#fff; color: var(--primary);">Book appointment(Call Clinic)</a>
+            <a href="mailto:worldcitimedical@gmail.com" class="btn btn-secondary">Email Clinic</a>
           </div>
         </div>
       </div>
@@ -1042,8 +1054,8 @@
   <footer>
     <div class="container footer-grid">
       <div>
-        <h4>Sydney CBD GP Clinic</h4>
-        <p>This one-file landing page is structured for clinic credibility, patient conversion, local SEO and future booking integration.</p>
+        <h4>Worldciti Medical</h4>
+        <p>Level 1, 722 George St Haymarket NSW 2000. Phone 02 9281 7311. Fax 02 9281 7377.</p>
       </div>
       <div>
         <h4>Quick links</h4>
@@ -1055,11 +1067,11 @@
         </ul>
       </div>
       <div>
-        <h4>Important</h4>
+        <h4>Contact</h4>
         <ul>
-          <li><a href="#contact">Privacy Policy</a></li>
-          <li><a href="#contact">Terms of Use</a></li>
-          <li><a href="#contact">Emergency Information</a></li>
+          <li><a href="tel:0292817311">02 9281 7311</a></li>
+          <li><a href="mailto:worldcitimedical@gmail.com">worldcitimedical@gmail.com</a></li>
+          <li><a href="#location">Emergency Information</a></li>
         </ul>
       </div>
     </div>
