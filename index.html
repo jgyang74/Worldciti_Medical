@@ -152,13 +152,10 @@
     }
 
     .brand-badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 168px;
+      height: auto;
+      max-height: 54px;
       object-fit: contain;
-      background: #fff;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 22px rgba(15, 76, 129, 0.18);
     }
 
     .nav-links {
@@ -600,6 +597,11 @@
     }
 
     @media (max-width: 820px) {
+      .brand-badge {
+        width: 142px;
+        max-height: 48px;
+      }
+
       .menu-toggle {
         display: block;
       }
