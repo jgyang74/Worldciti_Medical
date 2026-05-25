@@ -418,7 +418,7 @@
     }
 
     .doctor-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr;
     }
 
     .doctor-card {
@@ -427,13 +427,24 @@
     }
 
     .doctor-photo {
-      height: 220px;
+      height: 440px;
       background: linear-gradient(135deg, #dceaf7, #f4f8fb);
       display: grid;
       place-items: center;
       color: var(--primary);
       font-size: 3rem;
       font-weight: 800;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center 45%;
+    }
+
+    .doctor-photo.has-photo {
+      color: transparent;
+    }
+
+    .doctor-photo.team {
+      background-image: url("photoLeeKim.jpg");
     }
 
     .doctor-body {
@@ -650,6 +661,10 @@
 
       .cta-actions {
         justify-content: flex-start;
+      }
+
+      .doctor-photo {
+        height: 460px;
       }
 
     }
@@ -889,7 +904,7 @@
           </div>
           <div class="why-item reveal">
             <strong>Female GP team</strong>
-            <p>Meet Dr Jessica Lee and Dr Nam Eun Kim for patient-focused general practice care.</p>
+            <p>Meet Dr Nam Eun Kim and Dr Jessica Lee for patient-focused general practice care.</p>
           </div>
           <div class="why-item reveal">
             <strong>Multilingual patient support</strong>
@@ -911,31 +926,19 @@
 
         <div class="doctor-grid">
           <article class="card doctor-card reveal">
-            <div class="doctor-photo">DR</div>
+            <div class="doctor-photo has-photo team" role="img" aria-label="Portrait of Dr Nam Eun Kim and Dr Jessica Lee"></div>
             <div class="doctor-body">
-              <h3>Dr Jessica Lee</h3>
-              <p>Female GP</p>
+              <h3>Dr Nam Eun Kim & Dr Jessica Lee</h3>
+              <p>Female GP team</p>
               <div class="doctor-meta">
+                <span>Left: Dr Nam Eun Kim</span>
+                <span>Right: Dr Jessica Lee</span>
                 <span>Family Medicine</span>
                 <span>Women's Health</span>
                 <span>Preventive Care</span>
-              </div>
-              <p>Provides patient-centred general practice care across everyday health concerns, prevention and ongoing wellbeing.</p>
-              <a class="service-link" href="tel:0292817311">Book appointment(Call Clinic)</a>
-            </div>
-          </article>
-
-          <article class="card doctor-card reveal">
-            <div class="doctor-photo">DR</div>
-            <div class="doctor-body">
-              <h3>Dr Nam Eun Kim</h3>
-              <p>Female GP</p>
-              <div class="doctor-meta">
-                <span>Family Medicine</span>
                 <span>Chronic Care</span>
-                <span>Women's Health</span>
               </div>
-              <p>Supports patients with general health, preventive care and chronic disease management with clear follow-up planning.</p>
+              <p>Left in the photo is Dr Nam Eun Kim, and right in the photo is Dr Jessica Lee. Together they provide patient-centred general practice care across everyday health concerns, prevention, women's health and ongoing wellbeing.</p>
               <a class="service-link" href="tel:0292817311">Book appointment(Call Clinic)</a>
             </div>
           </article>
