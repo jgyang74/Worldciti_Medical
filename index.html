@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Worldciti Medical | GP Clinic in Haymarket</title>
-  <meta name="description" content="Worldciti Medical is a GP clinic in Haymarket offering family medicine, women's health, men's health, travel medicine, antenatal care, preventive care, chronic disease management, bulk billing information and more." />
+  <meta name="description" content="Worldciti Medical is a GP clinic in Haymarket offering GP appointments, multilingual care and bulk billing for eligible Medicare patients." />
   <meta name="theme-color" content="#0f4c81" />
   <meta property="og:title" content="Worldciti Medical | GP Clinic in Haymarket" />
-  <meta property="og:description" content="Call Worldciti Medical for GP appointments in Haymarket. Care available for English, Korean, Japanese and Chinese speaking patients, with bulk billing information available." />
+  <meta property="og:description" content="Call Worldciti Medical for GP appointments in Haymarket. Bulk billing is available for eligible Medicare patients, with English, Korean, Japanese and Chinese support." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_AU" />
   <style>
@@ -488,6 +488,40 @@
       font-weight: 700;
     }
 
+    .doctor-bio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .doctor-bio-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .doctor-bio-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .doctor-credentials {
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .doctor-bio-list {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      color: var(--muted);
+    }
+
+    .doctor-bio-list strong {
+      color: var(--text);
+    }
+
     .info-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
@@ -624,6 +658,7 @@
       .cta-band,
       .service-grid,
       .doctor-grid,
+      .doctor-bio-grid,
       .info-grid,
       .resource-grid,
       .stats,
@@ -671,6 +706,7 @@
       .hero-grid,
       .service-grid,
       .doctor-grid,
+      .doctor-bio-grid,
       .info-grid,
       .resource-grid,
       .location-grid,
@@ -766,12 +802,13 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal visible">
-          <div class="chip">Haymarket GP clinic • English, Korean, Japanese & Chinese</div>
+          <div class="chip">Haymarket GP clinic • Bulk billing available for eligible Medicare patients</div>
           <div class="eyebrow">Trusted, convenient and patient-friendly care</div>
           <h1>Worldciti Medical</h1>
           <p>
             Personalised general practice care in Haymarket for families, city professionals,
-            students and visitors. Call our clinic to book an appointment with our GP team.
+            students and visitors, with bulk billing available for eligible Medicare patients.
+            Call our clinic to book an appointment with our GP team.
           </p>
           <div class="hero-actions">
             <a href="tel:0292817311" class="btn btn-primary">Book appointment(Call Clinic)</a>
@@ -779,6 +816,7 @@
           </div>
           <div class="trust-row">
             <span class="trust-pill">Experienced female GPs</span>
+            <span class="trust-pill">Bulk billing available</span>
             <span class="trust-pill">Multilingual support</span>
             <span class="trust-pill">Level 1, 722 George St</span>
           </div>
@@ -802,8 +840,8 @@
             </div>
           </div>
           <div class="billing-note">
-            <strong>Bulk billing information</strong>
-            <p>Bulk billing means your doctor accepts the Medicare benefit as full payment, so there is no out-of-pocket cost for that visit. Please ask reception about eligibility when booking.</p>
+            <strong>Bulk billing may reduce your visit cost</strong>
+            <p>For eligible Medicare patients, bulk billing means there may be no out-of-pocket cost for that GP visit. Ask reception to confirm whether bulk billing applies when you book.</p>
           </div>
           <a href="tel:0292817311" class="btn btn-primary" style="width: 100%;">Book appointment(Call Clinic)</a>
           <div class="notice" style="margin-top: 1rem;">For medical emergencies, call 000 immediately.</div>
@@ -933,6 +971,10 @@
             <p>Call reception to arrange an appointment and confirm availability.</p>
           </div>
           <div class="why-item reveal">
+            <strong>Bulk billing available</strong>
+            <p>Eligible Medicare patients may be bulk billed, helping make GP care more affordable and easier to access.</p>
+          </div>
+          <div class="why-item reveal">
             <strong>Female GP team</strong>
             <p>Meet Dr Nam Eun Kim and Dr Jessica Lee for patient-focused general practice care.</p>
           </div>
@@ -973,6 +1015,33 @@
             </div>
           </article>
         </div>
+
+        <div class="doctor-bio-grid">
+          <article class="card doctor-bio-card reveal">
+            <div>
+              <h3>Dr Jessica Lee</h3>
+              <div class="doctor-credentials">MBBS (USYD)</div>
+            </div>
+            <ul class="doctor-bio-list">
+              <li><strong>Languages:</strong> English, Korean</li>
+              <li><strong>Experience:</strong> Over 30 years of experience</li>
+              <li><strong>Clinical interests:</strong> Women's health, cosmetic injections, men's health, preventive medicine, antenatal care, family planning, chronic disease management, weight management and WorkCover.</li>
+            </ul>
+            <a class="service-link" href="tel:0292817311">Book appointment(Call Clinic)</a>
+          </article>
+
+          <article class="card doctor-bio-card reveal">
+            <div>
+              <h3>Dr Nam Eun Kim</h3>
+              <div class="doctor-credentials">MBCHB, RACGP</div>
+            </div>
+            <ul class="doctor-bio-list">
+              <li><strong>Languages:</strong> English, Korean</li>
+              <li><strong>Clinical interests:</strong> Women's health, men's health, preventive medicine, family planning, chronic disease management, weight management and WorkCover.</li>
+            </ul>
+            <a class="service-link" href="tel:0292817311">Book appointment(Call Clinic)</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -994,8 +1063,8 @@
           </article>
           <article class="card info-card featured reveal">
             <h3>Bulk Billing</h3>
-            <p>In Australia, bulk billing means the doctor accepts the Medicare benefit as full payment, leaving no out-of-pocket cost for the patient for that visit.</p>
-            <a href="tel:0292817311" class="text-link">Ask reception</a>
+            <p>Bulk billing is a key reason many patients choose a GP clinic. If you are eligible through Medicare, your GP visit may have no out-of-pocket cost.</p>
+            <a href="tel:0292817311" class="text-link">Ask when booking</a>
           </article>
           <article class="card info-card reveal">
             <h3>Languages</h3>
@@ -1014,7 +1083,7 @@
           </article>
           <article class="card info-card reveal">
             <h3>Medicare Eligibility</h3>
-            <p>As of early 2026, more than 81% of GP visits are bulk billed nationally, with higher Medicare incentives for children, pensioners and concession card holders.</p>
+            <p>Please bring your Medicare card. Reception can help confirm whether bulk billing applies to your appointment before you visit.</p>
             <a href="tel:0292817311" class="text-link">Confirm before your visit</a>
           </article>
         </div>
@@ -1072,7 +1141,7 @@
             <div class="location-item reveal"><strong>Address</strong><br />Level 1, 722 George St Haymarket NSW 2000</div>
             <div class="location-item reveal"><strong>Hours</strong><br />Mon - Fri 9 am to 5 pm • Sat 9 am to 4 pm</div>
             <div class="location-item reveal"><strong>Contact</strong><br /><a href="tel:0292817311">02 9281 7311</a> • <a href="mailto:worldcitimedical@gmail.com">worldcitimedical@gmail.com</a></div>
-            <div class="location-item reveal"><strong>Bulk Billing</strong><br />Bring your Medicare card and ask reception whether bulk billing applies to your appointment.</div>
+            <div class="location-item reveal"><strong>Bulk Billing</strong><br />Bulk billing is available for eligible Medicare patients. Bring your Medicare card and ask reception when booking.</div>
             <div class="location-item reveal"><strong>Fax</strong><br />02 9281 7377</div>
             <div class="location-item reveal"><strong>Emergency</strong><br />If this is a medical emergency, call 000 immediately.</div>
           </div>
@@ -1086,7 +1155,7 @@
           <div>
             <div class="eyebrow" style="color: rgba(255,255,255,0.85);">Book an appointment</div>
             <h2 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; margin-bottom: 0.75rem;">Call Worldciti Medical</h2>
-            <p>Speak with our reception team to arrange an appointment. We welcome English, Korean, Japanese and Chinese speaking patients.</p>
+            <p>Speak with our reception team to arrange an appointment and confirm whether bulk billing applies. We welcome English, Korean, Japanese and Chinese speaking patients.</p>
           </div>
           <div class="cta-actions">
             <a href="tel:0292817311" class="btn btn-primary" style="background:#fff; color: var(--primary);">Book appointment(Call Clinic)</a>
