@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Worldciti Medical | GP Clinic in Haymarket</title>
-  <meta name="description" content="Worldciti Medical is a GP clinic in Haymarket offering family medicine, women's health, men's health, travel medicine, antenatal care, preventive care, chronic disease management and more." />
+  <meta name="description" content="Worldciti Medical is a GP clinic in Haymarket offering family medicine, women's health, men's health, travel medicine, antenatal care, preventive care, chronic disease management, bulk billing information and more." />
   <meta name="theme-color" content="#0f4c81" />
   <meta property="og:title" content="Worldciti Medical | GP Clinic in Haymarket" />
-  <meta property="og:description" content="Call Worldciti Medical for GP appointments in Haymarket. Care available for English, Korean, Japanese and Chinese speaking patients." />
+  <meta property="og:description" content="Call Worldciti Medical for GP appointments in Haymarket. Care available for English, Korean, Japanese and Chinese speaking patients, with bulk billing information available." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_AU" />
   <style>
@@ -283,6 +283,27 @@
       font-weight: 700;
     }
 
+    .billing-note {
+      margin-top: 0.9rem;
+      margin-bottom: 1rem;
+      border-radius: 18px;
+      background: rgba(15, 76, 129, 0.07);
+      border: 1px solid rgba(15, 76, 129, 0.12);
+      padding: 1rem;
+    }
+
+    .billing-note strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .billing-note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .stats {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -469,6 +490,11 @@
 
     .info-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .info-card.featured {
+      background: linear-gradient(180deg, #ffffff 0%, #eef8f7 100%);
+      border-color: rgba(58, 167, 163, 0.34);
     }
 
     .resource-grid {
@@ -775,6 +801,10 @@
               <span>English, Korean, Japanese and Chinese speaking patients welcome</span>
             </div>
           </div>
+          <div class="billing-note">
+            <strong>Bulk billing information</strong>
+            <p>Bulk billing means your doctor accepts the Medicare benefit as full payment, so there is no out-of-pocket cost for that visit. Please ask reception about eligibility when booking.</p>
+          </div>
           <a href="tel:0292817311" class="btn btn-primary" style="width: 100%;">Book appointment(Call Clinic)</a>
           <div class="notice" style="margin-top: 1rem;">For medical emergencies, call 000 immediately.</div>
         </div>
@@ -962,6 +992,11 @@
             <p>Please call the clinic directly to book an appointment with our reception team.</p>
             <a href="tel:0292817311" class="text-link">Call 02 9281 7311</a>
           </article>
+          <article class="card info-card featured reveal">
+            <h3>Bulk Billing</h3>
+            <p>In Australia, bulk billing means the doctor accepts the Medicare benefit as full payment, leaving no out-of-pocket cost for the patient for that visit.</p>
+            <a href="tel:0292817311" class="text-link">Ask reception</a>
+          </article>
           <article class="card info-card reveal">
             <h3>Languages</h3>
             <p>Catering for English, Korean, Japanese and Chinese speaking patients.</p>
@@ -976,6 +1011,11 @@
             <h3>Contact</h3>
             <p>Email worldcitimedical@gmail.com or fax documents to 02 9281 7377.</p>
             <a href="mailto:worldcitimedical@gmail.com" class="text-link">Email the clinic</a>
+          </article>
+          <article class="card info-card reveal">
+            <h3>Medicare Eligibility</h3>
+            <p>As of early 2026, more than 81% of GP visits are bulk billed nationally, with higher Medicare incentives for children, pensioners and concession card holders.</p>
+            <a href="tel:0292817311" class="text-link">Confirm before your visit</a>
           </article>
         </div>
       </div>
@@ -1032,6 +1072,7 @@
             <div class="location-item reveal"><strong>Address</strong><br />Level 1, 722 George St Haymarket NSW 2000</div>
             <div class="location-item reveal"><strong>Hours</strong><br />Mon - Fri 9 am to 5 pm • Sat 9 am to 4 pm</div>
             <div class="location-item reveal"><strong>Contact</strong><br /><a href="tel:0292817311">02 9281 7311</a> • <a href="mailto:worldcitimedical@gmail.com">worldcitimedical@gmail.com</a></div>
+            <div class="location-item reveal"><strong>Bulk Billing</strong><br />Bring your Medicare card and ask reception whether bulk billing applies to your appointment.</div>
             <div class="location-item reveal"><strong>Fax</strong><br />02 9281 7377</div>
             <div class="location-item reveal"><strong>Emergency</strong><br />If this is a medical emergency, call 000 immediately.</div>
           </div>
