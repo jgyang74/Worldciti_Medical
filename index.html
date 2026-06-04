@@ -12,16 +12,19 @@
   <meta property="og:locale" content="en_AU" />
   <style>
     :root {
-      --bg: #f6f8fb;
+      --bg: #fff8ef;
       --surface: #ffffff;
-      --surface-soft: #f0f5fa;
+      --surface-soft: #fff1de;
       --primary: #0f4c81;
       --primary-strong: #0a3a63;
       --accent: #3aa7a3;
+      --brand-orange: #f29200;
+      --brand-orange-dark: #c96b00;
+      --accent-soft: #fff1de;
       --text: #17324d;
       --muted: #60758a;
-      --border: #dce5ee;
-      --shadow: 0 16px 40px rgba(15, 76, 129, 0.08);
+      --border: #ecdcc9;
+      --shadow: 0 16px 40px rgba(154, 87, 0, 0.08);
       --radius-lg: 28px;
       --radius-md: 18px;
       --max: 1180px;
@@ -39,7 +42,7 @@
 
     body {
       font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #f7fbff 0%, #f6f8fb 100%);
+      background: linear-gradient(180deg, #fff9f1 0%, var(--bg) 100%);
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
@@ -70,7 +73,7 @@
       gap: 0.55rem;
       padding: 0.5rem 0.9rem;
       border-radius: 999px;
-      background: rgba(58, 167, 163, 0.1);
+      background: rgba(242, 146, 0, 0.1);
       color: var(--primary);
       font-weight: 700;
       font-size: 0.92rem;
@@ -129,9 +132,9 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 248, 239, 0.94);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(220, 229, 238, 0.9);
+      border-bottom: 1px solid rgba(236, 220, 201, 0.9);
     }
 
     .nav {
@@ -147,7 +150,7 @@
       align-items: center;
       gap: 0.85rem;
       font-weight: 800;
-      color: var(--primary);
+      color: var(--brand-orange-dark);
       letter-spacing: -0.02em;
     }
 
@@ -190,11 +193,32 @@
       align-items: center;
     }
 
+    .hero-title-block {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+
     .hero-copy h1 {
       font-size: clamp(2.5rem, 6vw, 4.9rem);
       line-height: 1.04;
       letter-spacing: -0.05em;
+      color: var(--brand-orange-dark);
+      width: max-content;
+      max-width: 100%;
+    }
+
+    .hero-doctor-photo {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      margin-top: 1rem;
       margin-bottom: 1rem;
+      object-fit: cover;
+      object-position: center 45%;
     }
 
     .hero-copy p {
@@ -237,7 +261,7 @@
     }
 
     .booking-panel {
-      background: linear-gradient(180deg, #ffffff 0%, #f4f8fb 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #fff5e8 100%);
     }
 
     .booking-panel h3 {
@@ -277,7 +301,7 @@
 
     .notice {
       border-radius: 16px;
-      background: rgba(58, 167, 163, 0.12);
+      background: rgba(242, 146, 0, 0.12);
       color: var(--primary-strong);
       padding: 0.95rem 1rem;
       font-weight: 700;
@@ -287,8 +311,8 @@
       margin-top: 0.9rem;
       margin-bottom: 1rem;
       border-radius: 18px;
-      background: rgba(15, 76, 129, 0.07);
-      border: 1px solid rgba(15, 76, 129, 0.12);
+      background: rgba(242, 146, 0, 0.08);
+      border: 1px solid rgba(242, 146, 0, 0.18);
       padding: 1rem;
     }
 
@@ -415,7 +439,7 @@
     }
 
     .why {
-      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%);
     }
 
     .why-grid {
@@ -449,7 +473,7 @@
 
     .doctor-photo {
       height: 440px;
-      background: linear-gradient(135deg, #dceaf7, #f4f8fb);
+      background: linear-gradient(135deg, #fff1de, #fff8ef);
       display: grid;
       place-items: center;
       color: var(--primary);
@@ -527,8 +551,8 @@
     }
 
     .info-card.featured {
-      background: linear-gradient(180deg, #ffffff 0%, #eef8f7 100%);
-      border-color: rgba(58, 167, 163, 0.34);
+      background: linear-gradient(180deg, #ffffff 0%, #fff1de 100%);
+      border-color: rgba(242, 146, 0, 0.34);
     }
 
     .resource-grid {
@@ -609,7 +633,7 @@
     footer {
       padding: 36px 0 52px;
       border-top: 1px solid var(--border);
-      background: #fff;
+      background: var(--bg);
     }
 
     .footer-grid {
@@ -804,7 +828,10 @@
         <div class="hero-copy reveal visible">
           <div class="chip">Haymarket GP clinic • Bulk billing available for eligible Medicare patients</div>
           <div class="eyebrow">Trusted, convenient and patient-friendly care</div>
-          <h1>Worldciti Medical</h1>
+          <div class="hero-title-block">
+            <h1 id="heroTitle">Worldciti Medical</h1>
+            <img class="hero-doctor-photo" src="photoLeeKim.jpg" alt="Dr Nam Eun Kim and Dr Jessica Lee" />
+          </div>
           <p>
             Personalised general practice care in Haymarket for families, city professionals,
             students and visitors, with bulk billing available for eligible Medicare patients.
@@ -996,26 +1023,6 @@
           </div>
         </div>
 
-        <div class="doctor-grid">
-          <article class="card doctor-card reveal">
-            <div class="doctor-photo has-photo team" role="img" aria-label="Portrait of Dr Nam Eun Kim and Dr Jessica Lee"></div>
-            <div class="doctor-body">
-              <h3>Dr Nam Eun Kim & Dr Jessica Lee</h3>
-              <p>Female GP team</p>
-              <div class="doctor-meta">
-                <span>Left: Dr Nam Eun Kim</span>
-                <span>Right: Dr Jessica Lee</span>
-                <span>Family Medicine</span>
-                <span>Women's Health</span>
-                <span>Preventive Care</span>
-                <span>Chronic Care</span>
-              </div>
-              <p>Left in the photo is Dr Nam Eun Kim, and right in the photo is Dr Jessica Lee. Together they provide patient-centred general practice care across everyday health concerns, prevention, women's health and ongoing wellbeing.</p>
-              <a class="service-link" href="tel:0292817311">Book appointment(Call Clinic)</a>
-            </div>
-          </article>
-        </div>
-
         <div class="doctor-bio-grid">
           <article class="card doctor-bio-card reveal">
             <div>
@@ -1196,6 +1203,17 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = navMenu.querySelectorAll('a');
+    const heroTitle = document.getElementById('heroTitle');
+    const heroDoctorPhoto = document.querySelector('.hero-doctor-photo');
+
+    const matchHeroPhotoWidth = () => {
+      if (!heroTitle || !heroDoctorPhoto) return;
+      heroDoctorPhoto.style.width = `${heroTitle.getBoundingClientRect().width}px`;
+    };
+
+    window.addEventListener('load', matchHeroPhotoWidth);
+    window.addEventListener('resize', matchHeroPhotoWidth);
+    matchHeroPhotoWidth();
 
     menuToggle.addEventListener('click', () => {
       const isOpen = navMenu.classList.toggle('open');
